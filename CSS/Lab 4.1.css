@@ -1,1 +1,41 @@
+.test {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 20px auto;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#timer {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+#stop {
+  margin: 15px auto;
+  display: block;
+}
+
+#resultsTable {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+}
+
+#resultsTable td, #resultsTable th {
+  border: 1px solid #ccc;
+  padding: 6px;
+}
+
+#total {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
