@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+            <link rel="icon"
+                href="#"
+            />
+            <link rel="stylesheet"
+                text="text/css"
+                href="./CSS/Lab 4.1.css"
+            />
+        <title>
+            Фонетика | Русский язык
+        </title>
+    </head>        
+    <body>
+        <div>
+            Митякин Никита 25ВП3 Вариант 8
+        </div>
+        <div>
+            Предмет «Русский язык». Тестирование по теме «Фонетика и
+            фонетическая транскрипция».
+        </div>
+        <h1>
+            ТЕСТ
+        </h1>
+        <div>
+            Осталось: 
+            <div id="timer">
+                05:00
+            </div>
+        </div>
+        <div class="test">
+            <div id="question1">
+                Зачем?
+            </div>
+            <div class="answer1">
+                <label>
+                    <input type="radio" name="a1" value="Потомучто">
+                        Потомучто
+                </label>
+                <label>
+                    <input type="radio" name="a1" value="Потому что">
+                        Потому что
+                </label>
+                <label>
+                    <input type="radio" name="a1" value="тмлофтмщуфп">
+                        тмлофтмщуфп
+                </label>
+                <label>
+                    <input type="radio" name="a1" value="ъ"> 
+                        ъ
+                </label>
+            </div>
+            <div id="question2">
+                Какие из этих слов начинаются с гласного звука?
+            </div>
+            <div class="answer2">
+                <label>
+                    <input type="checkbox" name="a2" value="аист">
+                        аист
+                </label>
+                <label>
+                    <input type="checkbox" name="a2" value="дуб">
+                        дуб
+                </label>
+                <label>
+                    <input type="checkbox" name="a2" value="осень">
+                        осень
+                </label>
+                <label>
+                    <input type="checkbox" name="a2" value="ъ"> 
+                        ъ
+                </label>
+            </div>
+            <div id="question3">
+                Какой первый звук в слове "Школа"?
+            </div>
+            <div class="answer3">
+                <label>
+                    <input type="radio" name="a3" value="мфтшмт">
+                        мфтшмт
+                </label>
+                <label>
+                    <input type="radio" name="a3" value="ш">
+                        ш
+                </label>
+                <label>
+                    <input type="radio" name="a3" value="Зачем">
+                        Зачем
+                </label>
+                <label>
+                    <input type="radio" name="a3" value="Ь"> 
+                        Ь
+                </label>
+            </div>
+            <div id="question4">
+                В каких словах все согласные звуки твёрдые?
+            </div>
+            <div class="answer4">
+                <label>
+                    <input type="checkbox" name="a4" value="мыло">
+                        мыло
+                </label>
+                <label>
+                    <input type="checkbox" name="a4" value="мяч">
+                        мяч
+                </label>
+                <label>
+                    <input type="checkbox" name="a4" value="жираф">
+                        жираф
+                </label>
+                <label>
+                    <input type="checkbox" name="a4" value="цирк"> 
+                        цирк
+                </label>
+            </div>
+            <div id="question5">
+                В каком слове есть мягкий согласный звук: "кот", "лень","парк"?'
+            </div>
+            <div class="answer5">
+                <select id="a5" name="a5">
+                    <option value=""> 
+                        Выбрать ответ
+                    </option>
+                    <option value="кот">
+                        кот
+                    </option>
+                    <option value="лень">
+                        лень
+                    </option>
+                    <option value="?">
+                        ?
+                    </option>
+                    <option value="парк">
+                        парк
+                    </option>
+                </select>
+            </div>
+            <div id="question6">
+                В каком слове все согласный звуки твёрдые: "мир", "дуб", "лень"?'
+            </div>
+            <div class="answer6">
+                <select id="a6" name="a6">
+                    <option value=""> 
+                        Выбрать ответ
+                    </option>
+                    <option value="дуб">
+                        дуб
+                    </option>
+                    <option value="мир, дружба, жвачка">
+                        мир, дружба, жвачка
+                    </option>
+                    <option value="у меня есть дела поважнее">
+                        у меня есть дела поважнее
+                    </option>
+                    <option value="xa">
+                        xa
+                    </option>
+                </select>
+            </div>
+            <div id="question7">
+                Сколько слогов в слове "книга"?
+            </div>
+            <div class="question7">
+                <input type="number" name="a7" placeholder="Введите число">
+            </div>
+            <div id="question8">
+                Какой последний звук в слове "стол"?'
+            </div>
+            <div class="question8">
+                <input type="text" name="a8" placeholder="Введите букву">
+            </div>
+        </div>
+        <button type="button" id="stop" onclick="Test()">
+            Завершить
+        </button>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <td>
+                        №
+                    </td>
+                    <td>
+                        Вопрос
+                    </td>
+                    <td>
+                        Ваш ответ
+                    </td>
+                    <td>
+                        Правильный ответ
+                    </td>
+                    <td>
+                        Балл
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="total">
+            ИТОГО:
+        </div>
+        <script src="./JS/Lab 4.1.js">
+        </script>
+    </body>
+</html>
