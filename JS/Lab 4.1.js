@@ -7,8 +7,9 @@ const TIMER = document.getElementById("timer");
  * @returns {string} Отформатированное время.
  */
 function formatTime(seconds) {
-    const MIN = String(Math.floor(seconds / 60)).padStart(2, '0');
-    const SEC = String(seconds % 60).padStart(2, '0');
+    const secMin = 60;
+    const MIN = String(Math.floor(seconds / Number(secMin))).padStart(2, '0');
+    const SEC = String(seconds % Number(secMin)).padStart(2, '0');
     return `${MIN}:${SEC}`;
 }
 
@@ -19,6 +20,7 @@ function formatTime(seconds) {
 function startTimer() {
     if (timerInterval) clearInterval(timerInterval);
     let timeLeft = 300;
+    const milliSec = 1000;
     TIMER.textContent = formatTime(timeLeft);
 
     timerInterval = setInterval(() => {
@@ -29,7 +31,7 @@ function startTimer() {
             timerInterval = null;
             Test();
         }
-    }, 1000);
+    }, milliSec);
 }
 
 /**
@@ -93,7 +95,6 @@ function Test() {
     const TBODY = document.getElementById("resultsTable").getElementsByTagName("tbody")[0];
     TBODY.innerHTML = "";
     const totalDiv = document.getElementById("total");
-    if (totalDiv) totalDiv.innerHTML = "ИТОГО:";
 
     const ANSWER = getAnswers();
 
@@ -206,6 +207,15 @@ function Test() {
     if (totalDiv) {
         totalDiv.innerHTML = `ИТОГО: ${totalScore} из ${TABLE.length}`;
     }
+
+    
+    const STOP = document.getElementById("stop");
+    STOP.disabled = true;
+    
+    const ANS = document.querySelectorAll('input, select');
+    ANS.forEach(an => {
+        an.disabled = true;
+    });
 }
 
 window.addEventListener('DOMContentLoaded', () => {
